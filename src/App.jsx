@@ -109,27 +109,27 @@ function App() {
       <section className="flex gap-6 justify-center mb-10 border-y-[0.1em] border-gray-200 py-6">
         <div className="px-7 border-r-[0.1em] border-gray-200">
           <h2 className="text-gray-400 text-[0.8rem] font-medium">Price</h2>
-          <p className="text-[2.5rem] font-bold">$5.47</p>
+          <p className="text-[2.5rem] font-semibold">$5.47</p>
         </div>
         <div className="px-7 border-r-[0.1em] border-gray-200">
           <h2 className="text-gray-400 text-[0.8rem] font-medium">
             Market Cap
           </h2>
-          <p className="text-[2.5rem] font-bold">$14.40M</p>
+          <p className="text-[2.5rem] font-semibold">$14.40M</p>
         </div>
         <div className="px-7 border-r-[0.1em] border-gray-200">
           <h2 className="text-gray-400 text-[0.8rem] font-medium">FDV</h2>
-          <p className="text-[2.5rem] font-bold">$8.42M</p>
+          <p className="text-[2.5rem] font-semibold">$8.42M</p>
         </div>
         <div className="px-7 border-r-[0.1em] border-gray-200">
           <h2 className="text-gray-400 text-[0.8rem] font-medium">
             Circulating Supply
           </h2>
-          <p className="text-[2.5rem] font-bold">$1.84M</p>
+          <p className="text-[2.5rem] font-semibold">$1.84M</p>
         </div>
         <div className="px-7">
           <h2 className="text-gray-400 text-[0.8rem] font-medium">Holders</h2>
-          <p className="text-[2.5rem] font-bold">51.40K</p>
+          <p className="text-[2.5rem] font-semibold">51.40K</p>
         </div>
       </section>
 
@@ -211,10 +211,10 @@ function App() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <button className="w-full bg-gray-400 text-[0.8rem] py-2 font-bold text-white rounded-full">
+            <button className="w-full bg-[#D0CCC8] text-[0.8rem] py-2 font-bold text-white rounded-full">
               Deposit
             </button>
-            <button className="w-full bg-gray-400 text-[0.8rem] py-2 font-bold text-white rounded-full">
+            <button className="w-full bg-[#D0CCC8] text-[0.8rem] py-2 font-bold text-white rounded-full">
               Withdraw
             </button>
           </div>
