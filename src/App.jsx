@@ -42,8 +42,15 @@ const data = [
 
 function App() {
   return (
-    <main className="px-20 py-6">
-      <header className="flex justify-between items-end mb-10">
+    <main className="pb-6">
+      <header className="bg-black py-4 px-20 flex items-center mb-12 justify-between">
+        <div className="flex gap-2 items-center">
+          <img src="/public/kinto.png" className="w-14" alt="kinto logo" />
+          <h1 className="text-white text-[1.8rem] font-medium">KINTO</h1>
+        </div>
+        <button className="uppercase px-6 py-2 font-semibold rounded-full bg-white">Connect Wallet</button>
+      </header>
+      <section className="px-20 flex justify-between items-end mb-10">
         <div className="flex items-center gap-6">
           <a target="_blank" href="https://engen.kinto.xyz/explore/k">
             <img src={kintoLogo} alt="kinto logo" className="w-30" />
@@ -104,14 +111,14 @@ function App() {
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
-      <section className="flex gap-6 justify-center mb-10 border-y-[0.1em] border-gray-200 py-6">
+      <section className="px-20 flex gap-6 justify-center mb-10 border-y-[0.1em] border-gray-200 py-6">
         <div className="px-7 border-r-[0.1em] border-gray-200">
           <h2 className="text-gray-400 text-[0.8rem] font-medium">
             Exit Price
           </h2>
-          <p className="text-[2.5rem] font-semibold">$5.47</p>
+          <p className="text-[2.5rem] font-semibold">$0.00</p>
         </div>
         <div className="px-7 border-r-[0.1em] border-gray-200">
           <h2 className="text-gray-400 text-[0.8rem] font-medium">
@@ -135,7 +142,7 @@ function App() {
         </div>
       </section>
 
-      <section className="flex items-start gap-5 justify-between">
+      <section className="px-20 flex items-start gap-5 justify-between">
         <div className="h-[300px] w-full flex-1">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
@@ -179,9 +186,13 @@ function App() {
                 </div>
               </div>
               <div>
-                <h1 className="font-bold text-[0.8rem]">- 325.20K</h1>
-                <p className="font-bold text-[0.8rem] text-gray-400">
+                {/* <h1 className="font-bold text-[0.8rem]">- 325.20K</h1> */}
+                <h1 className="font-bold text-[0.8rem]">0</h1>
+                {/* <p className="font-bold text-[0.8rem] text-gray-400">
                   $1790.87
+                </p> */}
+                <p className="font-bold text-[0.8rem] text-gray-400">
+                  $0.00
                 </p>
               </div>
             </div>
@@ -191,14 +202,18 @@ function App() {
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
                   Withdraw
                 </h1>
-                <p className="font-medium text-[0.8rem]">325.20 K</p>
+                {/* <p className="font-medium text-[0.8rem]">325.20 K</p> */}
+                <p className="font-medium text-[0.8rem]">0</p>
               </div>
               <div className="px-6 border-r-[0.1em] border-gray-300">
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
                   Swap Value
                 </h1>
-                <p className="font-medium text-center text-[0.8rem] text-red-400">
+                {/* <p className="font-medium text-center text-[0.8rem] text-red-400">
                   $1790.87
+                </p> */}
+                <p className="font-medium text-center text-[0.8rem] text-red-400">
+                  $0.00 
                 </p>
               </div>
               <div className="px-6">
@@ -220,7 +235,7 @@ function App() {
               Withdraw
             </button>
           </div>
-          <div className="flex gap-2 mt-2 mb-1">
+          {/* <div className="flex gap-2 mt-2 mb-1">
             <Icon
               icon="line-md:loading-alt-loop"
               className="text-[1.3rem] text-red-500"
@@ -237,7 +252,7 @@ function App() {
             <p className="text-[0.8rem] text-red-400 font-semibold">
               Swapping K to USDC
             </p>
-          </div>
+          </div> */}
           <p className="text-[0.8rem] text-center text-gray-500 mt-2 font-semibold">
             Withdrawal now takes 5-7 days due to verification process
           </p>
