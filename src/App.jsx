@@ -195,14 +195,14 @@ function App() {
               </div>
               <div className="px-6 border-r-[0.1em] border-gray-300">
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
-                  Current Value
+                  Swap Value
                 </h1>
                 <p className="font-medium text-center text-[0.8rem] text-red-400">
                   $1790.87
                 </p>
               </div>
               <div className="px-6">
-                <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
+                <h1 className="text-[0.8rem] mb-3 text-gray-600 font-medium">
                   Rewards
                 </h1>
                 <div className="grid place-items-center w-8 h-8 rounded-full bg-black">
