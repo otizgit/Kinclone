@@ -4,3 +4,7 @@
 * {
   font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
 }
+
+button {
+  cursor: pointer;
+}

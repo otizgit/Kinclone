@@ -9,6 +9,13 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import kintoLogo from "../src/assets/kinto.svg";
+import coinMarket from "../src/assets/coinmarket.png";
+import coin from "../src/assets/coin.png";
+import coinGecko from "../src/assets/coinGecko.png";
+import cryptone from "../src/assets/cryptone.png";
+import cryptwo from "../src/assets/cryptwo.png";
+import gate from "../src/assets/gate.png";
 
 const data = [
   {
@@ -38,7 +45,9 @@ function App() {
     <main className="px-20 py-6">
       <header className="flex justify-between items-end mb-10">
         <div className="flex items-center gap-6">
-          <div className="w-30 h-30 rounded-full bg-black"></div>
+          <a target="_blank" href="https://engen.kinto.xyz/explore/k">
+            <img src={kintoLogo} alt="kinto logo" className="w-30" />
+          </a>
           <div>
             <h1 className="text-[2.5rem] font-bold flex items-center gap-5">
               KINTO{" "}
@@ -48,14 +57,14 @@ function App() {
               K is the governance token of the Kinto network
             </p>
             <div className="flex items-center gap-2">
-              <button className="flex gap-1 items-center font-medium uppercase bg-gray-200 text-[0.75rem] px-2 py-1 rounded-full">
+              <button className="flex gap-1 items-center font-medium uppercase bg-[#ECEBE9] text-[0.75rem] px-2 py-1 rounded-full">
                 <Icon icon="streamline-plump:web" className="text-[0.8rem]" />
                 <p>Website</p>
               </button>
-              <div className="px-2 py-1 bg-gray-300 rounded-full text-[0.8rem]">
+              <div className="px-2 py-1 bg-[#D0CCC8] rounded-full font-medium text-[0.75rem]">
                 L2
               </div>
-              <div className="px-2 py-1 bg-gray-300 rounded-full font-medium uppercase text-[0.8rem]">
+              <div className="px-2 py-1 bg-[#D0CCC8] rounded-full font-medium uppercase text-[0.75rem]">
                 governance
               </div>
             </div>
@@ -64,52 +73,67 @@ function App() {
 
         <div className="flex gap-6">
           <div>
-            <h3 className="text-[0.8rem] font-medium">View in Explorers:</h3>
+            <h3 className="text-[0.8rem] mb-1">View in Explorers:</h3>
             <div className="flex items-center gap-1">
-              <Icon icon="token:crypto-com" className="text-[2rem]" />
-              <Icon icon="token:crypto-com" className="text-[2rem]" />
-              <Icon icon="token:crypto-com" className="text-[2rem]" />
+              <button>
+                <img src={coinMarket} alt="coin gecko" className="w-8" />
+              </button>
+              <button>
+                <img src={coinGecko} alt="coin market" className="w-8" />
+              </button>
+              <button>
+                <img src={coin} alt="coin" className="w-8" />
+              </button>
             </div>
           </div>
           <div>
-            <h3 className="text-[0.8rem] font-medium">Buy $K on:</h3>
+            <h3 className="text-[0.8rem] mb-1">Buy $K on:</h3>
             <div className="flex items-center gap-1">
-              <Icon icon="token:crypto-com" className="text-[2rem]" />
-              <Icon icon="token:crypto-com" className="text-[2rem]" />
-              <Icon icon="token:crypto-com" className="text-[2rem]" />
+              <button>
+                <img src={kintoLogo} alt="kinto logo" className="w-8" />
+              </button>
+              <button>
+                <img src={cryptone} alt="logo" className="w-8" />
+              </button>
+              <button>
+                <img src={cryptwo} alt="logo" className="w-8" />
+              </button>
+              <button>
+                <img src={gate} alt="logo" className="w-8" />
+              </button>
             </div>
           </div>
         </div>
       </header>
 
-      <section className="flex gap-6 justify-evenly mb-10 px-18 border-y-[0.1em] border-gray-200 py-6">
-        <div className="border-r-[0.1em] border-gray-200 px-7 flex-1">
-          <h2 className="text-gray-400 text-[0.9rem] font-medium">Price</h2>
-          <p className="text-[2.5rem] font-bold">$0.84</p>
+      <section className="flex gap-6 justify-center mb-10 border-y-[0.1em] border-gray-200 py-6">
+        <div className="px-7 border-r-[0.1em] border-gray-200">
+          <h2 className="text-gray-400 text-[0.8rem] font-medium">Price</h2>
+          <p className="text-[2.5rem] font-bold">$5.47</p>
         </div>
-        <div className="border-r-[0.1em] border-gray-200 px-7 flex-1">
-          <h2 className="text-gray-400 text-[0.9rem] font-medium">
+        <div className="px-7 border-r-[0.1em] border-gray-200">
+          <h2 className="text-gray-400 text-[0.8rem] font-medium">
             Market Cap
           </h2>
           <p className="text-[2.5rem] font-bold">$14.40M</p>
         </div>
-        <div className="border-r-[0.1em] border-gray-200 px-7 flex-1">
-          <h2 className="text-gray-400 text-[0.9rem] font-medium">FDV</h2>
+        <div className="px-7 border-r-[0.1em] border-gray-200">
+          <h2 className="text-gray-400 text-[0.8rem] font-medium">FDV</h2>
           <p className="text-[2.5rem] font-bold">$8.42M</p>
         </div>
-        <div className="border-r-[0.1em] border-gray-200 px-7 flex-1">
-          <h2 className="text-gray-400 text-[0.9rem] font-medium">
+        <div className="px-7 border-r-[0.1em] border-gray-200">
+          <h2 className="text-gray-400 text-[0.8rem] font-medium">
             Circulating Supply
           </h2>
           <p className="text-[2.5rem] font-bold">$1.84M</p>
         </div>
-        <div>
-          <h2 className="text-gray-400 text-[0.9rem] font-medium">Holders</h2>
+        <div className="px-7">
+          <h2 className="text-gray-400 text-[0.8rem] font-medium">Holders</h2>
           <p className="text-[2.5rem] font-bold">51.40K</p>
         </div>
       </section>
 
-      <section className="flex items-start justify-between">
+      <section className="flex items-start gap-5 justify-between">
         <div className="h-[300px] w-full flex-1">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
@@ -139,8 +163,10 @@ function App() {
           </ResponsiveContainer>
         </div>
 
-        <div className="w-[400px]">
-          <h1 className="mb-3 text-gray-600 text-[1.1rem] font-medium">Withdraw K</h1>
+        <div className="w-[370px]">
+          <h1 className="mb-3 text-gray-600 text-[1.1rem] font-medium">
+            Withdraw K
+          </h1>
           <div className="p-2 py-3 mb-4 border-[0.1em] border-gray-300 bg-gray-100 rounded-md">
             <div className="flex justify-between items-center gap-4 pb-3 border-b-[0.1em] border-gray-300 mb-3">
               <div className="flex gap-2 items-center">
@@ -153,25 +179,27 @@ function App() {
               <div>
                 <h1 className="font-bold text-[0.8rem]">325.30K</h1>
                 <p className="font-bold text-[0.8rem] text-gray-400">
-                  $1790.78
+                  $1790.87
                 </p>
               </div>
             </div>
 
             <div className="flex justify-around">
-              <div>
+              <div className="px-6 border-r-[0.1em] border-gray-300">
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
-                  Deposited
+                  Withdraw
                 </h1>
                 <p className="font-medium text-[0.8rem]">325.20 K</p>
               </div>
-              <div>
+              <div className="px-6 border-r-[0.1em] border-gray-300">
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
                   Current Value
                 </h1>
-                <p className="font-medium text-[0.8rem] text-red-400">1,790.87</p>
+                <p className="font-medium text-[0.8rem] text-red-400">
+                  $1790.87
+                </p>
               </div>
-              <div>
+              <div className="px-6">
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
                   Rewards
                 </h1>
@@ -184,14 +212,23 @@ function App() {
 
           <div className="flex flex-col gap-2">
             <button className="w-full bg-gray-400 text-[0.8rem] py-2 font-bold text-white rounded-full">
-              Deposit K
+              Deposit
             </button>
             <button className="w-full bg-gray-400 text-[0.8rem] py-2 font-bold text-white rounded-full">
               Withdraw
             </button>
           </div>
+          <div className="flex gap-2 mt-2 mb-1">
+            <Icon
+              icon="line-md:loading-alt-loop"
+              className="text-[1.3rem] text-red-500"
+            />
+            <p className="text-[0.8rem] text-red-400 font-semibold">
+              2/7 days processing left
+            </p>
+          </div>
           <p className="text-[0.8rem] text-center text-gray-500 mt-2 font-semibold">
-            Withdraw taked 5-7 days due to verification process
+            Withdrawal takes 5-7 days due to verification process
           </p>
         </div>
       </section>
