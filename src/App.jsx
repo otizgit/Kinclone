@@ -182,11 +182,11 @@ function App() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-5">
-            <button className="w-full bg-gray-300 py-2 font-bold text-white rounded-full">
+          <div className="flex flex-col gap-2">
+            <button className="w-full bg-gray-400 text-[0.8rem] py-2 font-bold text-white rounded-full">
               Deposit K
             </button>
-            <button className="w-full bg-gray-300 py-2 font-bold text-white rounded-full">
+            <button className="w-full bg-gray-400 text-[0.8rem] py-2 font-bold text-white rounded-full">
               Withdraw
             </button>
           </div>
