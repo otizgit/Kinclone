@@ -163,13 +163,13 @@ function App() {
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
                   Deposited
                 </h1>
-                <p className="text-[0.8rem]">325.20 K</p>
+                <p className="font-medium text-[0.8rem]">325.20 K</p>
               </div>
               <div>
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
                   Current Value
                 </h1>
-                <p className="text-[0.8rem]">325.20 K</p>
+                <p className="font-medium text-[0.8rem] text-red-400">1,790.87</p>
               </div>
               <div>
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
