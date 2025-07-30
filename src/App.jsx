@@ -43,7 +43,7 @@ function App() {
   ];
 
   const [isConnected, setConnected] = useState(false);
-  console.log(isConnected);
+  const address = "0xA2968399Cfc9A24E954Fb049dE1A8833a4a4Ec97";
 
   return (
     <main className="pb-6">
@@ -57,7 +57,7 @@ function App() {
           className="uppercase px-6 py-2 font-semibold rounded-full bg-white"
         >
           {isConnected
-            ? "0xA2968399Cfc9A24E954Fb049dE1A8833a4a4Ec97"
+            ? address.slice(0, 6) + "..." + address.slice(-4)
             : "Connect Wallet"}
         </button>
       </header>
