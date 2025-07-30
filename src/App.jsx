@@ -108,7 +108,9 @@ function App() {
 
       <section className="flex gap-6 justify-center mb-10 border-y-[0.1em] border-gray-200 py-6">
         <div className="px-7 border-r-[0.1em] border-gray-200">
-          <h2 className="text-gray-400 text-[0.8rem] font-medium">Exit Price</h2>
+          <h2 className="text-gray-400 text-[0.8rem] font-medium">
+            Exit Price
+          </h2>
           <p className="text-[2.5rem] font-semibold">$5.47</p>
         </div>
         <div className="px-7 border-r-[0.1em] border-gray-200">
@@ -224,11 +226,11 @@ function App() {
               className="text-[1.3rem] text-red-500"
             />
             <p className="text-[0.8rem] text-red-400 font-semibold">
-              2/7 days processing left
+              2/7 days of processing left
             </p>
           </div>
           <p className="text-[0.8rem] text-center text-gray-500 mt-2 font-semibold">
-            Withdrawal takes 5-7 days due to verification process
+            Withdrawal now takes 5-7 days due to verification process
           </p>
         </div>
       </section>
