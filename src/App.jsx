@@ -16,39 +16,50 @@ import coinGecko from "../src/assets/coingecko.png";
 import cryptone from "../src/assets/cryptone.png";
 import cryptwo from "../src/assets/cryptwo.png";
 import gate from "../src/assets/gate.png";
-
-const data = [
-  {
-    name: "3 Jul",
-    amt: 2000,
-  },
-  {
-    name: "8 Jul",
-    amt: 2210,
-  },
-  {
-    name: "13 Jul",
-    amt: 290,
-  },
-  {
-    name: "18 Jul",
-    amt: 300,
-  },
-  {
-    name: "23 Jul",
-    amt: 451,
-  },
-];
+import { useState } from "react";
 
 function App() {
+  const data = [
+    {
+      name: "3 Jul",
+      amt: 2000,
+    },
+    {
+      name: "8 Jul",
+      amt: 2210,
+    },
+    {
+      name: "13 Jul",
+      amt: 290,
+    },
+    {
+      name: "18 Jul",
+      amt: 300,
+    },
+    {
+      name: "23 Jul",
+      amt: 451,
+    },
+  ];
+
+  const [isConnected, setConnected] = useState(false);
+  console.log(isConnected);
+
   return (
     <main className="pb-6">
-      <header className="bg-black py-4 px-20 flex items-center mb-12 justify-between">
-        <div className="flex gap-2 items-center">
+      <header className="bg-black py-4 px-20 flex items-center mb-12 justify-end">
+        {/* <div className="flex gap-2 items-center">
           <img src="/public/kinto.png" className="w-14" alt="kinto logo" />
           <h1 className="text-white text-[1.8rem] font-medium">KINTO</h1>
-        </div>
-        <button className="uppercase px-6 py-2 font-semibold rounded-full bg-white">Connect Wallet</button>
+        </div> */}
+        <button
+          onClick={() => setConnected(true)}
+          className="uppercase px-6 py-2 font-semibold rounded-full bg-white"
+        >
+          {isConnected
+            ? "0xA2968399Cfc9A24E954Fb049dE1A8833a4a4Ec97"
+            : "Connect Wallet"}
+        </button>
       </header>
       <section className="px-20 flex justify-between items-end mb-10">
         <div className="flex items-center gap-6">
@@ -118,7 +129,11 @@ function App() {
           <h2 className="text-gray-400 text-[0.8rem] font-medium">
             Exit Price
           </h2>
-          <p className="text-[2.5rem] font-semibold">$0.00</p>
+          {isConnected ? (
+            <p className="text-[2.5rem] font-semibold">$5.47</p>
+          ) : (
+            <p className="text-[2.5rem] font-semibold">$0.00</p>
+          )}
         </div>
         <div className="px-7 border-r-[0.1em] border-gray-200">
           <h2 className="text-gray-400 text-[0.8rem] font-medium">
@@ -186,14 +201,21 @@ function App() {
                 </div>
               </div>
               <div>
-                {/* <h1 className="font-bold text-[0.8rem]">- 325.20K</h1> */}
-                <h1 className="font-bold text-[0.8rem]">0</h1>
-                {/* <p className="font-bold text-[0.8rem] text-gray-400">
-                  $1790.87
-                </p> */}
-                <p className="font-bold text-[0.8rem] text-gray-400">
-                  $0.00
-                </p>
+                {isConnected ? (
+                  <div>
+                    <h1 className="font-bold text-[0.8rem]">- 325.20K</h1>
+                    <p className="font-bold text-[0.8rem] text-gray-400">
+                      $1790.87
+                    </p>
+                  </div>
+                ) : (
+                  <div>
+                    <h1 className="font-bold text-[0.8rem]">0</h1>
+                    <p className="font-bold text-[0.8rem] text-gray-400">
+                      $0.00
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -202,19 +224,25 @@ function App() {
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
                   Withdraw
                 </h1>
-                {/* <p className="font-medium text-[0.8rem]">325.20 K</p> */}
-                <p className="font-medium text-[0.8rem]">0</p>
+                {isConnected ? (
+                  <p className="font-medium text-[0.8rem]">325.20 K</p>
+                ) : (
+                  <p className="font-medium text-[0.8rem]">0</p>
+                )}
               </div>
               <div className="px-6 border-r-[0.1em] border-gray-300">
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
                   Swap Value
                 </h1>
-                {/* <p className="font-medium text-center text-[0.8rem] text-red-400">
-                  $1790.87
-                </p> */}
-                <p className="font-medium text-center text-[0.8rem] text-red-400">
-                  $0.00 
-                </p>
+                {isConnected ? (
+                  <p className="font-medium text-center text-[0.8rem] text-red-400">
+                    $1790.87
+                  </p>
+                ) : (
+                  <p className="font-medium text-center text-[0.8rem] text-red-400">
+                    $0.00
+                  </p>
+                )}
               </div>
               <div className="px-6">
                 <h1 className="text-[0.8rem] mb-3 text-gray-600 font-medium">
@@ -236,23 +264,23 @@ function App() {
             </button>
           </div>
           {/* <div className="flex gap-2 mt-2 mb-1">
-            <Icon
-              icon="line-md:loading-alt-loop"
-              className="text-[1.3rem] text-red-500"
-            />
-            <p className="text-[0.8rem] text-red-400 font-semibold">
-              2/7 days of processing left
-            </p>
-          </div>
-          <div className="flex gap-2 mt-1 mb-1">
-            <Icon
-              icon="line-md:loading-alt-loop"
-              className="text-[1.3rem] text-red-500"
-            />
-            <p className="text-[0.8rem] text-red-400 font-semibold">
-              Swapping K to USDC
-            </p>
-          </div> */}
+              <Icon
+                icon="line-md:loading-alt-loop"
+                className="text-[1.3rem] text-red-500"
+              />
+              <p className="text-[0.8rem] text-red-400 font-semibold">
+                2/7 days of processing left
+              </p>
+            </div>
+            <div className="flex gap-2 mt-1 mb-1">
+              <Icon
+                icon="line-md:loading-alt-loop"
+                className="text-[1.3rem] text-red-500"
+              />
+              <p className="text-[0.8rem] text-red-400 font-semibold">
+                Swapping K to USDC
+              </p>
+            </div> */}
           <p className="text-[0.8rem] text-center text-gray-500 mt-2 font-semibold">
             Withdrawal now takes 5-7 days due to verification process
           </p>
