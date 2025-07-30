@@ -12,7 +12,7 @@ import {
 import kintoLogo from "../src/assets/kinto.svg";
 import coinMarket from "../src/assets/coinmarket.png";
 import coin from "../src/assets/coin.png";
-import coinGecko from "../src/assets/coinGecko.png";
+import coinGecko from "../src/assets/coingecko.png";
 import cryptone from "../src/assets/cryptone.png";
 import cryptwo from "../src/assets/cryptwo.png";
 import gate from "../src/assets/gate.png";
