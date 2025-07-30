@@ -108,7 +108,7 @@ function App() {
 
       <section className="flex gap-6 justify-center mb-10 border-y-[0.1em] border-gray-200 py-6">
         <div className="px-7 border-r-[0.1em] border-gray-200">
-          <h2 className="text-gray-400 text-[0.8rem] font-medium">Price</h2>
+          <h2 className="text-gray-400 text-[0.8rem] font-medium">Exit Price</h2>
           <p className="text-[2.5rem] font-semibold">$5.47</p>
         </div>
         <div className="px-7 border-r-[0.1em] border-gray-200">
