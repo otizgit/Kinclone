@@ -170,14 +170,14 @@ function App() {
           <div className="p-2 py-3 mb-4 border-[0.1em] border-gray-300 bg-gray-100 rounded-md">
             <div className="flex justify-between items-center gap-4 pb-3 border-b-[0.1em] border-gray-300 mb-3">
               <div className="flex gap-2 items-center">
-                <div className="w-10 h-10 rounded-full bg-black"></div>
+                <img src={kintoLogo} alt="logo" className="w-10" />
                 <div>
                   <h1 className="font-bold text-[0.8rem]">KINTO</h1>
                   <p className="text-gray-500 text-[0.8rem]">K</p>
                 </div>
               </div>
               <div>
-                <h1 className="font-bold text-[0.8rem]">325.30K</h1>
+                <h1 className="font-bold text-[0.8rem]">- 325.20K</h1>
                 <p className="font-bold text-[0.8rem] text-gray-400">
                   $1790.87
                 </p>
@@ -195,7 +195,7 @@ function App() {
                 <h1 className="text-[0.8rem] mb-6 text-gray-600 font-medium">
                   Current Value
                 </h1>
-                <p className="font-medium text-[0.8rem] text-red-400">
+                <p className="font-medium text-center text-[0.8rem] text-red-400">
                   $1790.87
                 </p>
               </div>
