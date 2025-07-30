@@ -229,6 +229,15 @@ function App() {
               2/7 days of processing left
             </p>
           </div>
+          <div className="flex gap-2 mt-1 mb-1">
+            <Icon
+              icon="line-md:loading-alt-loop"
+              className="text-[1.3rem] text-red-500"
+            />
+            <p className="text-[0.8rem] text-red-400 font-semibold">
+              Swapping K to USDC
+            </p>
+          </div>
           <p className="text-[0.8rem] text-center text-gray-500 mt-2 font-semibold">
             Withdrawal now takes 5-7 days due to verification process
           </p>
