@@ -271,7 +271,7 @@ function App() {
                   className="text-[1.3rem] text-red-500"
                 />
                 <p className="text-[0.8rem] text-red-400 font-semibold">
-                  2/7 days of processing left
+                  5/7 days of processing left
                 </p>
               </div>
               <div className="flex gap-2 mt-1 mb-1">
